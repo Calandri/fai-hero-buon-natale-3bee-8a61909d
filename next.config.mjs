@@ -1,10 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone",
-  // Support basePath for preview routing (e.g., /preview)
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || "",
-  // Ensure assets work with basePath
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || "",
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'blog.3bee.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api-backend-assets.s3.eu-south-1.amazonaws.com',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

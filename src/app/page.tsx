@@ -1,39 +1,39 @@
+/**
+ * Page Assembly - Main Landing Page
+ *
+ * TODO: Assemblaggio finale page.tsx
+ * Specs: Importa tutti i componenti, layout full viewport 100vh con overflow hidden (no scroll!),
+ * background gradient scuro caldo (dal nero al viola scuro), layering corretto z-index.
+ *
+ * - viewport: 100vh, overflow: hidden
+ * - background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%)
+ * - layering_order: bg -> snow(1) -> particles(2) -> content(5) -> bee(10)
+ */
+
+import { Snowfall } from "@/components/Snowfall/Snowfall";
+import { GoldenParticles } from "@/components/GoldenParticles/GoldenParticles";
+import { BeeAnimation } from "@/components/BeeAnimation/BeeAnimation";
+import { HeroContent } from "@/components/HeroContent/HeroContent";
+import { Footer } from "@/components/Footer/Footer";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white flex flex-col items-center justify-center px-6">
-      <div className="text-center max-w-2xl animate-fade-in">
-        {/* Loader */}
-        <div className="mb-12 flex justify-center">
-          <span className="loader" />
-        </div>
+    <div
+      id="hero-page"
+      className="relative min-h-screen w-full overflow-hidden bg-gradient-dark"
+    >
+      {/* Background Effects Layer */}
+      <Snowfall id="effects-snowfall" className="absolute inset-0 z-snow" />
+      <GoldenParticles id="effects-golden-particles" className="absolute inset-0 z-particles" />
 
-        {/* Main text */}
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900 mb-6 animate-slide-up">
-          La tua immaginazione
-          <br />
-          <span className="gradient-text font-medium">
-            comparira qui
-          </span>
-        </h1>
+      {/* Content Layer */}
+      <HeroContent id="content-hero" className="relative z-content" />
 
-        {/* Subtitle */}
-        <p
-          className="text-lg md:text-xl text-gray-500 font-light animate-slide-up"
-          style={{ animationDelay: "0.2s" }}
-        >
-          Le tue idee si realizzeranno qui
-        </p>
+      {/* Footer */}
+      <Footer id="content-footer" className="absolute bottom-4 left-0 right-0 z-content" />
 
-        {/* Decorative dots */}
-        <div
-          className="mt-16 flex items-center justify-center gap-2 animate-pulse-slow"
-          style={{ animationDelay: "0.4s" }}
-        >
-          <span className="w-2 h-2 bg-gray-300 rounded-full" />
-          <span className="w-2 h-2 bg-gray-400 rounded-full" />
-          <span className="w-2 h-2 bg-gray-300 rounded-full" />
-        </div>
-      </div>
-    </main>
+      {/* Easter Egg - Animated Bee */}
+      <BeeAnimation id="effects-bee" className="absolute z-bee" />
+    </div>
   );
 }
