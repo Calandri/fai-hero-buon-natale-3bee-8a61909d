@@ -1,0 +1,27 @@
+/* GoldenParticles Component Styles */
+
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: translateY(5px) translateZ(0);
+  }
+  50% {
+    transform: translateY(-5px) translateZ(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Animation container ensures keyframes are available */
+.animationContainer {
+  --particle-float: particleFloat;
+  --glow-pulse: glowPulse;
+}
