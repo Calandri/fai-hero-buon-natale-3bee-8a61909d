@@ -4,7 +4,7 @@ export type FooterVariant = "light" | "dark";
 export interface FooterProps {
   /** ID HTML obbligatorio per testing e tracking */
   id: string;
-  /** Testo del footer - default: "Con amore dal Team 3Bee 🐝 - Natale 2024" */
+  /** Testo del footer - default: "Con amore dal Team 3Bee 🐝 - Natale 2025" */
   text?: string;
   /** Classe CSS aggiuntiva */
   className?: string;

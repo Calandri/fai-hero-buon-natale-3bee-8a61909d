@@ -5,7 +5,7 @@
  * Positioned at bottom center with white/gold styling on transparent background.
  *
  * Specs:
- * - text: "Con amore dal Team 3Bee 🐝 - Natale 2024"
+ * - text: "Con amore dal Team 3Bee 🐝 - Natale 2025"
  * - position: absolute bottom-4 center
  * - color: #FFFFFF with slight gold accent
  * - typography: 0.875rem, letter-spacing wide
@@ -18,7 +18,7 @@ import React from "react";
 import { tv } from "tailwind-variants";
 import type { FooterProps } from "./Footer.props";
 
-const DEFAULT_TEXT = "Con amore dal Team 3Bee 🐝 - Natale 2024";
+const DEFAULT_TEXT = "Con amore dal Team 3Bee 🐝 - Natale 2025";
 
 const footerVariants = tv({
   slots: {
