@@ -2,11 +2,11 @@
  * Footer Component
  *
  * TODO: Implementare questo componente
- * Specs: Footer fisso in basso - "Con amore dal Team 3Bee - Natale 2024".
+ * Specs: Footer fisso in basso - "Con amore dal Team 3Bee - Natale 2025".
  * Stile elegante ma caldo, testo bianco/oro su sfondo trasparente.
  * Position absolute bottom.
  *
- * - text: "Con amore dal Team 3Bee - Natale 2024"
+ * - text: "Con amore dal Team 3Bee - Natale 2025"
  * - position: absolute bottom-4 center
  * - color: #FFFFFF with slight gold accent
  * - typography: 0.875rem, letter-spacing wide
